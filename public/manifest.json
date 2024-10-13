@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Youtube Thumbnail Downloader",
+  "version": "1.0.0",
+  "description": "Download youtube thumbnail",
+  "icons": {
+    "16": "./images/icon-16.png",
+    "48": "./images/icon-48.png",
+    "128": "./images/icon-128.png",
+    "32": "./images/icon-32.png"
+  },
+  "action": {
+    "default_popup": "./index.html",
+    "default_popup_size": {
+      "width": 400,
+      "height": 300
+    },
+    "default_icon": {
+      "16": "./images/icon-16.png"
+    }
+  },
+  "permissions": ["tabs"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"]
+    }
+  ]
+}
